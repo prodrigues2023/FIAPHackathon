@@ -1,0 +1,7 @@
+
+/datasets/test/images/*.jpg
+/datasets/train/images/*.jpg
+/datasets/valid/images/*.jpg
+/datasets/test/labels/*.txt
+/datasets/train/labels/*.txt
+/datasets/valid/labels/*.txt

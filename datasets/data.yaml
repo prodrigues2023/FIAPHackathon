@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 4
+names: ['knife', "scissor", 'sickle', 'sword']
+
+roboflow:
+  workspace: br-wjiqt
+  project: knife-epqzp-0rybq
+  version: 1
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/br-wjiqt/knife-epqzp-0rybq/dataset/1
