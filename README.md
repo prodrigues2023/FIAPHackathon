@@ -16,16 +16,37 @@ A empresa tem o objetivo de validar a viabilidade dessa feature, e para isso, se
 
 # Etapas da solução
 ## Obtenção do Dataset
-1 - dataset de facas
-2 - dataset de tesouras
-3 - dataset de foice e espada
+Foi utilizado datasets do Roboflow, disponível em: https://universe.roboflow.com/, sendo eles:
+* dataset de facas -> https://universe.roboflow.com/br-wjiqt/knife-epqzp-0rybq
+
+* dataset de tesouras -> https://universe.roboflow.com/x-j1nva/b-7elht
+
+* dataset de foice e espada -> https://universe.roboflow.com/data-zygje/sajam
 
 ## Normatização dos dados
-1 - normatização das imagens e datasets
+Para normatilizaçaõ dos dados foi realizado os seguintes processos:
+
+* remoção de imagens que não possuiam label de mapeamento.
+* remoção de label de mapeamento que não possuíam imagens.
+* padronização dos nomes dos arquivos de imagens e labels sequenciamente.
+* alteração dos labels de mapeamento para o formato yolo do dataset foice e espada.
 
 ## Treinamento e Teste do modelo
-1 - treinamento do modelo
-2 - teste do modelo
-3 - teste do modelo com imagens aleatórias
+Foi criado o arquivo main.ipynb para realizar o treinamento e teste do modelo.
+
+No próprio notebook tem detalhes de como o treinamento foi realizado.
 
 ## Criação do sistema de alertas
+Foi criado o arquivo visionguard-mail.ipynb para realizar o envio de alertas por e-mail.
+
+
+# Instruções para execução do projeto
+## Instalação do ambiente
+* Descompactar o arquivo zip no diretório do projeto.
+
+## Outras dependências
+* Durante a execução do arquivo de treinamento modifique o caminho do dataset caso esteja usando um caminho diferente do atribuido na variável HOME.
+
+* Durante a execução do arquivo de treinamento modifique o parâmetro de device=0 para device='CPU' caso não tenha uma GPU disponível.
+
+* Durante a execução do arquivo de envio de alertas modifique o parâmetro do servidor de e-mail para os dados de acesso do seu email.
